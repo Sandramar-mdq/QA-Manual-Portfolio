@@ -24,14 +24,14 @@ El objetivo de este proyecto es demostrar mis habilidades en el relevamiento fun
 ## 📂 Estructura del Portfolio
 
 ### 🗺️ Proyecto 1: "Destino Soñado" (Pruebas de Extremo a Extremo)
-El análisis y la documentación técnica se encuentran dentro de la carpeta `destino-sonado-project`:
-1.  **[Análisis Exploratorio y de Riesgos](destino-sonado-project/analisis_exploratorio_inicial_destino_soniado.md):** Mapa funcional del sistema, comportamiento de componentes globales (Navbar, Footer, Formspree), escenarios críticos potenciales y matriz preliminar de riesgos.
-2.  **[Casos de Prueba y Reporte de Defectos](destino-sonado-project/manual_test_cases_contact_form_destino_soniado.md):** Matriz detallada con los 20 escenarios probados en el formulario de contacto junto a la tabla de bugs encontrados clasificados por severidad.
+El análisis y la documentación técnica se encuentran dentro de la carpeta `proyecto destino-sonado`:
+1. **[Análisis Exploratorio y de Riesgos](proyecto destino-sonado/analisis_exploratorio_inicial_destino_soniado.md):** Mapa funcional del sistema, comportamiento de componentes globales (Navbar, Footer, Formspree), escenarios críticos potenciales y matriz preliminar de riesgos.
+2. **[Casos de Prueba y Reporte de Defectos](proyecto destino-sonado/manual_test_cases_contact_form_destino_soniado.md):** Matriz detallada con los 20 escenarios probados en el formulario de contacto junto a la tabla de bugs encontrados clasificados por severidad.
 
 ### 🧪 Proyecto 2: "The Internet Herokuapp" (Ejercicios de Práctica QA)
 Documentación de diseño de pruebas en entornos de práctica controlados dentro de la carpeta `herokuapp-project`:
-1.  **[Casos de Prueba Funcionales de Registro](herokuapp-project/casos_prueba_registro_usuario.md):** Diseño de matriz clásica de pruebas de caja negra enfocada en restricciones de negocio, campos requeridos y formatos de datos.
-2.  **[Historias de Usuario y Criterios de Aceptación](herokuapp-project/historias_de_usuario_criterios_aceptacion.md):** Estructuración de requerimientos en formato ágil (User Stories) aplicados a flujos críticos de Login, Autenticación y Logout.
+1. **[Casos de Prueba Funcionales de Registro](herokuapp-project/casos_prueba_registro_usuario.md):** Diseño de matriz clásica de pruebas de caja negra enfocada en restricciones de negocio, campos requeridos y formatos de datos.
+2. **[Historias de Usuario y Criterios de Aceptación](herokuapp-project/historias_de_usuario_criterios_aceptacion.md):** Estructuración de requerimientos en formato ágil (User Stories) aplicados a flujos críticos de Login, Autenticación y Logout.
 
 ### 📝 Documentación Complementaria de QA
 * **[Matriz de Ejercicios Conceptuales - PDF Interactive View](ejercicios_casos_de_prueba_manual.pdf):** Resolución de guías prácticas adicionales y diseño de escenarios lógicos generales para control de calidad.
