@@ -21,12 +21,15 @@ El objetivo de este proyecto es demostrar mis habilidades en el relevamiento fun
 
 ---
 
-## 📂 Estructura del Proyecto de Pruebas
+## 📂 Estructura del Portfolio
 
-El análisis y la documentación técnica se encuentran divididos en las siguientes secciones dentro de la carpeta `destino-sonado-project`:
-
+### 🗺️ Proyecto 1: "Destino Soñado" (Pruebas de Extremo a Extremo)
+El análisis y la documentación técnica se encuentran dentro de la carpeta `destino-sonado-project`:
 1.  **[Análisis Exploratorio y de Riesgos](destino-sonado-project/analisis_exploratorio_inicial_destino_soniado.md):** Mapa funcional del sistema, comportamiento de componentes globales (Navbar, Footer, Formspree), escenarios críticos potenciales y matriz preliminar de riesgos.
-2.  **[Casos de Prueba y Reporte de Defectos](destino-sonado-project/manual_test_cases_contact_form_destino_soniado.md):** Matriz detallada con los 20 escenarios probados en el formulario de contacto (pruebas de límites, campos obligatorios, tipos de datos inválidos y consistencia de fechas) junto a la tabla de bugs encontrados clasificados por severidad.
+2.  **[Casos de Prueba y Reporte de Defectos](destino-sonado-project/manual_test_cases_contact_form_destino_soniado.md):** Matriz detallada con los 20 escenarios probados en el formulario de contacto junto a la tabla de bugs encontrados clasificados por severidad.
+
+### 📝 Proyecto 2: Prácticas y Ejercicios Conceptuales de QA
+*   **[Matriz de Ejercicios de Casos de Prueba - PDF Interactive View](ejercicios_casos_de_prueba_manual.pdf):** Documentación complementaria que incluye resolución de guías prácticas, diseño de escenarios lógicos de prueba y aplicación de conceptos teóricos de control de calidad.
 
 ---
 
