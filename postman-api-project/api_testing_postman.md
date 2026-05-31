@@ -47,9 +47,10 @@ pm.test("Todos los posts tienen title no vacío", function () {
     });
 });
 ```
-###2. Endpoint: GET /posts/1 (Consulta por ID Existente)
+### 2. Endpoint: GET /posts/1 (Consulta por ID Existente)
 Verificación del filtro específico para asegurar que los datos devueltos coincidan exactamente con los del recurso solicitado.
-```
+
+```javascript
 let respuesta = pm.response.json();
 
 pm.test("Status es 200", function () {
@@ -64,9 +65,12 @@ pm.test("El cuerpo (body) de la publicación no está vacío", function () {
     pm.expect(respuesta.body).to.not.be.empty;
 });
 ```
+
 ### 3. Endpoint: GET /posts/9999 (Caso Negativo - Recurso No Encontrado)
 Validación del manejo de excepciones del lado del servidor para IDs fuera de rango o inexistentes.
-```pm.test("Status es 404", function () {
+
+```javascript
+pm.test("Status es 404", function () {
     pm.response.to.have.status(404);
 });
 
