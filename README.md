@@ -32,6 +32,7 @@ El análisis y la documentación técnica se encuentran dentro de su sección co
 Documentación de diseño de pruebas en entornos de práctica controlados dentro de la carpeta `herokuapp-project`:
 1. **[Casos de Prueba Funcionales de Registro](./herokuapp-project/casos_prueba_registro_usuario.md):** Diseño de matriz clásica de pruebas de caja negra enfocada en restricciones de negocio, campos requeridos y formatos de datos.
 2. **[Historias de Usuario y Criterios de Aceptación](./herokuapp-project/historias_de_usuario_criterios_aceptacion.md):** Estructuración de requerimientos en formato ágil (User Stories) aplicados a flujos críticos de Login, Autenticación y Logout.
+3. **[Casos de Prueba de Imágenes Rotas](./herokuapp-project/casos_prueba_imagenes_rotas.md):** Diseño de escenarios de prueba visuales y de carga de elementos de interfaz para asegurar la integridad de los recursos gráficos.
 
 ### 📝 Documentación Complementaria de QA
 * **[Matriz de Ejercicios Conceptuales - PDF Interactive View](./ejercicios_casos_de_prueba_manual.pdf):** Resolución de guías prácticas adicionales y diseño de escenarios lógicos generales para control de calidad.
