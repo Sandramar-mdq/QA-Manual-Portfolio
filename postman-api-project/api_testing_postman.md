@@ -46,3 +46,27 @@ pm.test("Todos los posts tienen title no vacío", function () {
         pm.expect(post.title).to.not.be.empty;
     });
 });
+
+let respuesta = pm.response.json();
+
+pm.test("Status es 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("El id devuelto es 1", function () {
+    pm.expect(respuesta.id).to.eql(1);
+});
+
+pm.test("El cuerpo (body) de la publicación no está vacío", function () {
+    pm.expect(respuesta.body).to.not.be.empty;
+});
+
+pm.test("Status es 404", function () {
+    pm.response.to.have.status(404);
+});
+
+pm.test("La respuesta del cuerpo está vacía", function () {
+    let respuesta = pm.response.json();
+    pm.expect(Object.keys(respuesta).length).to.eql(0);
+});
+
