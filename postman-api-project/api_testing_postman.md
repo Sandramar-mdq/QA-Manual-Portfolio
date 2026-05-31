@@ -16,7 +16,7 @@ Se validaron múltiples métodos HTTP bajo dos enfoques principales:
 
 ## 🛠️ Detalle de los Scripts de Prueba (JavaScript - PM API)
 
-### 1. Endpoint: `GET /posts` (Listado Completo)
+### 1. Endpoint: GET /posts (Listado Completo)
 Validación orientada a asegurar que el servidor devuelva la colección completa de publicaciones y que ningún elemento contenga información rota o ausente.
 
 ```javascript
@@ -36,7 +36,7 @@ pm.test("La lista no está vacía", function () {
     pm.expect(respuesta.length).to.be.above(0);
 });
 
-// Bucle de integridad: Valida que CADA post posea un ID y un título válido
+// Bucle de integridad: Valida que CADA post posea un ID
 respuesta.forEach(function(post) {
     pm.expect(post.id).to.exist;
 });
@@ -46,7 +46,10 @@ pm.test("Todos los posts tienen title no vacío", function () {
         pm.expect(post.title).to.not.be.empty;
     });
 });
-
+```
+###2. Endpoint: GET /posts/1 (Consulta por ID Existente)
+Verificación del filtro específico para asegurar que los datos devueltos coincidan exactamente con los del recurso solicitado.
+```
 let respuesta = pm.response.json();
 
 pm.test("Status es 200", function () {
@@ -60,8 +63,10 @@ pm.test("El id devuelto es 1", function () {
 pm.test("El cuerpo (body) de la publicación no está vacío", function () {
     pm.expect(respuesta.body).to.not.be.empty;
 });
-
-pm.test("Status es 404", function () {
+```
+### 3. Endpoint: GET /posts/9999 (Caso Negativo - Recurso No Encontrado)
+Validación del manejo de excepciones del lado del servidor para IDs fuera de rango o inexistentes.
+```pm.test("Status es 404", function () {
     pm.response.to.have.status(404);
 });
 
@@ -69,4 +74,4 @@ pm.test("La respuesta del cuerpo está vacía", function () {
     let respuesta = pm.response.json();
     pm.expect(Object.keys(respuesta).length).to.eql(0);
 });
-
+```
