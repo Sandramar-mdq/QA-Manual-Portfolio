@@ -129,3 +129,41 @@ def test_form_nombre_vacio(driver):
     campo_nombre = driver.find_element(By.ID, "nombre")
     mensaje = campo_nombre.get_attribute("validationMessage")
     assert "Completa este campo" in mensaje
+```
+---
+🔑 2. Automatización de Flujos de Autenticación (qa-automation)
+Desarrollo de scripts para el testeo completo de control de accesos sobre la plataforma de pruebas Herokuapp.
+
+Modularidad: Creación de funciones dedicadas (abrir_pagina() y hacer_login()) para evitar duplicación de localizadores (IDs y selectores CSS).
+
+Robustez de Cobertura: Implementación de un arnés de pruebas completo que abarca flujos exitosos (Happy Path), credenciales incorrectas, campos vacíos, sensibilidad a mayúsculas y control de ingreso de caracteres invisibles (espacios).
+
+Python
+# Fragmento de pruebas de inicio de sesión en Herokuapp
+def test_login_invalido():
+    driver = abrir_pagina()
+    hacer_login(driver, "tomsmith", "1234") 
+
+    mensaje = driver.find_element(By.ID, "flash").text
+    assert "Your password is invalid" in mensaje
+    driver.quit()
+    
+def test_espacios_en_lugar_de_usuario():
+    driver = abrir_pagina()
+    hacer_login(driver, "   ", "SuperSecretPassword!") 
+
+    mensaje = driver.find_element(By.ID, "flash").text
+    assert "Your username is invalid!" in mensaje
+    driver.quit()
+🛠️ Habilidades Aplicadas en este Repositorio
+Diseño de Casos de Prueba: Escenarios Funcionales, Casos Positivos, Negativos y Extremos de Caja Negra.
+
+Reporte y Seguimiento de Bugs: Registro detallado, priorización y uso del Tablero Kanban con Jira Software.
+
+Automation Testing: Escritura de scripts robustos E2E empleando Python y Selenium WebDriver.
+
+Test Frameworks y Scripting: Organización de suites, aserciones y fixtures de pruebas mediante Pytest.
+
+Entornos y Control de Dependencias: Gestión de ambientes virtuales en Python (venv) y configuraciones vía requirements.txt.
+
+Testing de APIs: Verificación de peticiones y respuestas mediante colecciones de Postman.
