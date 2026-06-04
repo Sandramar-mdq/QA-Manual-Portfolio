@@ -47,6 +47,58 @@ Durante el ciclo de pruebas logré identificar fallos críticos en la lógica de
 *   **Falta de Sanitización de Datos:** El campo de teléfono admite caracteres alfabéticos y se permiten archivos adjuntos de formatos no permitidos (ej. PDFs en campos destinados a imágenes de DNI).
 
 ---
+## 🛠️ Gestión de Pruebas con Jira (Tablero Kanban)
+
+Para la gestión del ciclo de vida del testing, la organización de las tareas y el reporte de defectos, utilicé **Jira Software**, aplicando la metodología **Kanban** dentro del proyecto **"QA Practice"**.
+
+### 📋 Estructura del Tablero
+El flujo de trabajo se dividió en tres estados principales para mantener una visibilidad clara del progreso:
+* **Por Hacer (To Do):** Casos de prueba diseñados listos para ser ejecutados.
+* **En Curso (In Progress):** Defectos detectados que se encuentran bajo revisión o reporte detallado.
+* **Hecho (Done):** Tareas finalizadas con éxito.
+
+---
+
+### 🔍 Casos de Prueba y Reporte de Bugs Detallados
+
+A continuación, se detallan los tickets gestionados en la herramienta, los cuales incluyen la definición del ambiente, pasos de reproducción, resultados esperados y adjuntos de evidencia:
+
+#### 1. 🟢 TC01 - Verificación de Login Exitoso (Caso de Prueba Positivo)
+* **ID:** KAN-2
+* **Estado:** Por Hacer
+* **Componentes / Etiquetas:** `form`, `login`, `validation`
+* **Descripción:** Validación del flujo principal de inicio de sesión utilizando credenciales válidas (`tomsmith` / `SuperSecretPassword!`).
+* **Evidencia asociada:** Se incluye como archivo adjunto la captura de la interfaz de login configurada correctamente.
+
+*(Captura de referencia en Jira: `verificacion_login _exitoso.png` | Interfaz web: `herokuapp_login_valido.jpg`)*
+
+#### 2. 🔴 Bug: El campo "Nombre" permite enviar formularios usando solo espacios (Defecto de Validación)
+* **ID:** KAN-1
+* **Estado:** En Curso
+* **Componentes / Etiquetas:** `form`, `frontend`, `validation`
+* **Descripción:** Se detectó un comportamiento incorrecto en el formulario de la sección "Inicio - Viajes". El sistema permite procesar de manera exitosa el envío cuando el campo obligatorio "Nombre" contiene únicamente espacios en blanco, omitiendo la validación de datos válidos.
+* **Resultado Esperado:** El sistema debe rechazar espacios vacíos y mostrar un mensaje de validación de campo requerido.
+* **Resultado Actual:** El formulario se envía correctamente con información inválida.
+
+*(Capturas de referencia en Jira: `jira_bug_espacios.png` y `jira_bug_detalle_espacios.jpg`)*
+
+#### 3. 🔵 TC_IMG_06 - Verificación de carga de la imagen 2 (Caso de Prueba Negativo / Bug)
+* **ID:** KAN-3
+* **Estado:** Por Hacer
+* **Componentes / Etiquetas:** `image`, `ui`, `frontend`
+* **Descripción:** Comprobación de que las imágenes de la sección `broken_images` se renderizan de forma correcta en el navegador Google Chrome sobre Windows.
+* **Resultado Esperado:** La imagen 2 se visualiza correctamente sin errores de carga ni íconos de imagen rota.
+* **Resultado Actual:** Aparece el logo de imagen rota en el frontend. No se presenta texto alternativo (alt) ni un fallback adaptativo.
+
+*(Captura de referencia en Jira: `jira_broken_images.png` | Interfaz web con el fallo: `herokuapp_broken_img.png`)*
+
+---
+
+### 📸 Evidencias Generales del Proyecto
+
+#### Vista General del Tablero Kanban (`jira.png`)
+En esta captura se aprecia el estado del proyecto **QA Practice**, reflejando la distribución de los tickets de prueba y los bugs reportados en sus respectivas columnas de flujo.
+---
 
 ## 🛠️ Habilidades Aplicadas en este Repositorio
 *   Diseño de Casos de Prueba (Casos Positivos, Negativos y Extremos).
